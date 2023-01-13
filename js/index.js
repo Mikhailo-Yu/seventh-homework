@@ -81,6 +81,14 @@ let numberQube = prompt('До завдання 5. Введіть число як
 let indicator = 0;
 let degree;
 
+if (numberQube === null ) {
+    document.write(``)
+} else if (numberQube.trim() === '') {
+    document.write(``) 
+}  else if (isNaN( +numberQube)) {
+    document.write(``) 
+} else { document.write(`Ви перевіряєте число: ${numberQube}.`);}
+
 if (numberQube === null) {
     document.write(' Ви нічого не ввели, якщо ви хочете, перевірити умову з завдання 5, оновіть сторінку і спробуйте ще!');
 } else if (isNaN( +numberEasy)) { document.write(`Ви ввели букви, оновіть сторінку та спробуйте ще!`);}
@@ -103,5 +111,5 @@ if (indicator === 1) {
     document.write('');
 } else if (isNaN( +numberEasy)) {
     document.write('');
-} else {document.write('Ні, не можна'); }
+} else {document.write(' Ні, не можна'); }
 
